@@ -1,8 +1,10 @@
-# Yarn Pile
-
-A visual novel/point-and-click game template using [Yarn Spinner ('develop' branch)](https://github.com/YarnSpinnerTool/YarnSpinner-Unity/tree/develop) and Unity 2020.
-
-### [WebGL Example](https://angelahe.dev/YarnPile/)
+<div align="center">
+  <h1>Yarn Pile</h1>
+  <h4>
+  A visual novel/point-and-click game template using Yarn Spinner ('develop' branch) and Unity 2020.
+  </h4>
+  <h3><a href="https://angelahe.dev/YarnPile/">WebGL Example</a></h3>
+</div>
 
 <div align="center">
 <img src="GifTitleScreen.gif"/>
@@ -195,7 +197,7 @@ To modify:
 2. Load data in either `UseSaveData` or `UseSaveDataOnPlay`
 3. Save data in either `SaveDataListeners`, `SaveDataListenersOnPlay`, or `PrepareSaveData`
 
-# Limitiations
+# Limitations
 
 - CharTween can tween at max 200 characters due to DOTween's max capacity. Thus either limit all dialogue lines to <=200 characters or refactor to have effects without CharTween
 - `OptionsTimed.anim` must be around 1 second
