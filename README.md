@@ -3,7 +3,7 @@
   <h4>
   A visual novel/point-and-click game template using Yarn Spinner ('develop' branch) and Unity 2020.
   </h4>
-  <a href="https://angelahe.dev/YarnPile/"><h3>WebGL Example</h3></a>
+  <h3><a href="https://angelahe.dev/YarnPile/">WebGL Example</a></h3>
 </div>
 
 <div align="center">
