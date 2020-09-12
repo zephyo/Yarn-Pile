@@ -1,0 +1,21 @@
+{
+    "name": "YarnSpinnerTests",
+    "references": [
+        "YarnSpinner.Unity"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "YarnSpinner.dll"
+    ],
+    
+    "autoReferenced": true,
+    "defineConstraints": []
+}

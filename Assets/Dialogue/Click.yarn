@@ -1,0 +1,13 @@
+﻿
+title: Click
+tags:
+---
+<<if has("Headphones") is true>>
+    Player: You clicked the button!
+    <<Drop Headphones 1>>
+    Player: I don't need headphones.
+<<else>>
+    Player: Why'd you click again?
+    <<Take Headphones 1>>
+<<endif>>
+===

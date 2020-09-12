@@ -1,0 +1,19 @@
+{
+    "name": "YarnSpinner.Unity.Editor",
+    "references": [
+        "YarnSpinner.Unity",
+        "Unity.Addressables",
+        "Unity.Addressables.Editor",
+        "Unity.TextMeshPro"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
