@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using CsvHelper;
 using CsvHelper.Configuration.Attributes;
+using UnityEngine;
 
 namespace Yarn.Unity
 {
@@ -86,6 +87,7 @@ namespace Yarn.Unity
         /// when parsing the string.</throws>
         public static IEnumerable<StringTableEntry> ParseFromCSV(string sourceText)
         {
+
             using (var stringReader = new System.IO.StringReader(sourceText))
             using (var csv = new CsvReader(stringReader, GetConfiguration()))
             {
@@ -98,17 +100,36 @@ namespace Yarn.Unity
                 csv.ReadHeader();
                 while (csv.Read())
                 {
-                    var record = new StringTableEntry
+                    StringTableEntry record;
+                    if (!csv.TryGetField<string>("id", out string id))
                     {
-                        Language = csv.GetField<string>("language"),
-                        ID = csv.GetField<string>("id"),
-                        Text = csv.GetField<string>("text"),
-                        File = csv.GetField<string>("file"),
-                        Node = csv.GetField<string>("node"),
-                        LineNumber = csv.GetField<string>("lineNumber"),
-                        Lock = csv.GetField<string>("lock"),
-                        Comment = csv.GetField<string>("comment"),
-                    };
+                        // continue;
+                        record = new StringTableEntry
+                        {
+                            Language = csv.GetField<string>("Language"),
+                            ID = csv.GetField<string>("ID"),
+                            Text = csv.GetField<string>("Text"),
+                            File = csv.GetField<string>("File"),
+                            Node = csv.GetField<string>("Node"),
+                            LineNumber = csv.GetField<string>("LineNumber"),
+                            Lock = csv.GetField<string>("Lock"),
+                            Comment = csv.GetField<string>("Comment"),
+                        };
+                    }
+                    else
+                    {
+                        record = new StringTableEntry
+                        {
+                            Language = csv.GetField<string>("language"),
+                            ID = csv.GetField<string>("id"),
+                            Text = csv.GetField<string>("text"),
+                            File = csv.GetField<string>("file"),
+                            Node = csv.GetField<string>("node"),
+                            LineNumber = csv.GetField<string>("lineNumber"),
+                            Lock = csv.GetField<string>("lock"),
+                            Comment = csv.GetField<string>("comment"),
+                        };
+                    }
                     records.Add(record);
                 }
 
